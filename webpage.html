@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script type="text/javascript">
+            function selectedMod(){
+                var inputSem1 = document.getElementsByName("sem1");
+                var countSem1 = 0;
+                for (var i = 0; i < inputSem1.length; i++){
+                    if (inputSem1[i].checked) countSem1++;
+                }
+                
+                var inputSem2 = document.getElementsByName("sem2");
+                var countSem2 = 0;
+                for (var i = 0; i < inputSem2.length; i++){
+                    if (inputSem2[i].checked) countSem2++;
+                }
+                
+                
+                if ((countSem1 != 3) || (countSem2 != 3)) alert("Not enough Modules selected");
+            }
+        
+            </script>
+    </head>
     <body><center><img src="logo.jpg" alt="HTML Icon">
+        <form onsubmit="selectedMod()">
             <table width = "400" align="center" cellspacing="10">
                 <tr>
                     <th>Module Name</th>
@@ -20,23 +42,23 @@
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/progs/modules/6CCS3AMS.aspx">6CCS3AMS - Agents and Multi-Agent Systems</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem1"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3CFL.aspx">6CCS3CFL - Compiler and Formal Languages</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem1"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/progs/modules/6CCS3COV.aspx">6CCS3COV - Computer Vision</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem1"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/progs/modules/6CCS3CSL.aspx">6CCS3CSL - Computer Science Logic</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem1"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3HCI.aspx">6CCS3HCI - Human-Computer Interaction</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem1"></td>
                 </tr>
                 <tr></tr>
                 <tr></tr>
@@ -46,24 +68,35 @@
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3DSM.aspx">6CCS3DSM - Distributed Systems</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem2"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3COM.aspx">6CCS3COM - Computational Models</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem2"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3SAD.aspx">6CCS3SAD - Software Architecture and Design</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem2"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3SIA.aspx">6CCS3SIA - Software Engineering of Internet Applications</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem2"></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3SIA.aspx">6CCS3NSE - Network Security</td>
-                    <td><input type="checkbox" name="module1"></td>
+                    <td><input type="checkbox" name="sem2"></td>
                 </tr>
-                
+                <tr><td><input type="submit"/>
+                </table>
+            </form>
+        
+                <p id="errormsg" hidden>Testest</p>
     </center></body>
+    
+    
+    
+    
+    
+    
+    
 </html>
