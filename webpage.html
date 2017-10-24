@@ -16,8 +16,15 @@
                 }
                 
                 
-                if ((countSem1 != 3) || (countSem2 != 3)) alert("Not enough Modules selected");
-                else alert("Modules successfully selected");
+                if ((countSem1 == 3) || (countSem2 == 3)) {
+                    alert("Modules successfully selected");
+                    window.location.href = "finish.html";
+                    return false;
+                }
+                else {
+                    alert("Not enough Modules selected");
+                }
+                return true;
             }
         
             </script>
@@ -48,7 +55,7 @@
 
 
     <body><center><img src="logo.jpg" alt="HTML Icon">
-        <form onsubmit="selectedMod()">
+        <form onsubmit="return selectedMod()">
             <table width = "400" align="center" cellspacing="10">
                 <tr>
                     <th><h1>Module Name</th><h1>
