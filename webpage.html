@@ -17,19 +17,45 @@
                 
                 
                 if ((countSem1 != 3) || (countSem2 != 3)) alert("Not enough Modules selected");
+                else alert("Modules successfully selected");
             }
         
             </script>
     </head>
+
+     <style> 
+
+                h1 {
+                    font-size: 250%;
+                }
+
+                h2 {
+                font-size: initial;
+                color: red; } 
+
+                h3 {
+                    font-size: initial;
+                    color: black;
+                }
+
+                h4 {
+                    font-size: initial;
+                    color: black;
+                }
+
+
+                </style>
+
+
     <body><center><img src="logo.jpg" alt="HTML Icon">
         <form onsubmit="selectedMod()">
             <table width = "400" align="center" cellspacing="10">
                 <tr>
-                    <th>Module Name</th>
+                    <th><h1>Module Name</th><h1>
                     <th></th>
                 </tr>
                 <tr>
-                    <td>Compulsory Modules</td>
+                    <td><h2>Compulsory Modules</td><h2>
                 </tr>
                 <tr>
                     <td><a href="">6CCS3PRJ - Individual Project</td>
@@ -38,7 +64,7 @@
                 <tr></tr>
                 <tr></tr>
                 <tr>
-                    <td>Semester 1</td>
+                    <td><h3>Semester 1</td><h3>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/progs/modules/6CCS3AMS.aspx">6CCS3AMS - Agents and Multi-Agent Systems</td>
@@ -64,7 +90,7 @@
                 <tr></tr>
                 <tr></tr>
                 <tr>
-                    <td>Semester 2</td>
+                    <td><h4>Semester 2</td><h4>
                 </tr>
                 <tr>
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3DSM.aspx">6CCS3DSM - Distributed Systems</td>
@@ -86,7 +112,7 @@
                     <td><a href="https://www.kcl.ac.uk/nms/depts/informatics/study/current/handbook/Progs/Modules/6CCS3SIA.aspx">6CCS3NSE - Network Security</td>
                     <td><input type="checkbox" name="sem2"></td>
                 </tr>
-                <tr><td><input type="submit"/>
+                <tr><td><center><input type="submit"/></td></tr></center>
                 </table>
             </form>
         
